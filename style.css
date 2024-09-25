@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --AlmostWhite: hsl(0, 0%, 98%);
+    --MediumGray: hsl(0, 0%, 41%);
+    --AlmostBlack: hsl(0, 0%, 8%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Epilogue", sans-serif;
+    background-color: var(--AlmostWhite);
+}
+header{
+    margin: 30 50px 100px;
+    height: 100vh;
+}
+header nav{
+    display: grid;
+    grid-template-columns: 10% 80%;
+    width: 100%;
+}
+header nav .logo{
+    margin:28px 0 0 10px;
+    width: 70px;
+}
+
+header nav .nav-head{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    
+}
+header nav .nav-head #close-menue{
+    display: none;
+}
+
+header nav .nav-head .items{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+header nav .nav-head .items  .item1{
+    display: inline-block;
+    margin-right: 30px;
+    color: var(--MediumGray);
+    transition: all 0.6s;
+    font-family: inherit;
+    cursor: pointer;
+}
+header nav .nav-head .items  .item1 .arr-up-1{
+    margin-left: 10px;
+}
+header nav .nav-head .items  .item1 .arr-up-2{
+    margin-left: 10px;
+}
+header nav .nav-head .items  .item1:hover{
+    color: var(--AlmostBlack);
+}
+header nav .nav-head .items  .item1 .drowp-menu1{
+    background-color: var(--AlmostWhite);
+    box-shadow: 0 0 5px 0px rgba(0, 0, 1, 0.61);
+    position: absolute;
+    top: 90px;
+    left:80px;
+    padding: 20px 15px;
+    border-radius: 10px;
+     display: none; 
+    transition: all 0.6s;
+}
+header nav .nav-head .items .item1 .drowp-menu1.active{
+    display: block;
+}
+
+header nav .nav-head .items  .item1 .drowp-menu1 li{
+    margin-top: 10px;
+}
+header nav .nav-head .items  .item1 .drowp-menu1 li p{
+    margin-left:10px ;
+    display: inline-block;
+}
+header nav .nav-head .items  .item1 .drowp-menu2{
+    background-color: var(--AlmostWhite);
+    box-shadow: 0 0 5px 0px rgba(0, 0, 1, 0.61);
+    position: absolute;
+    top: 95px;
+    left:240px;
+    padding: 20px;
+    border-radius: 10px;
+     display: none; 
+    transition: all 0.6s;
+}
+header nav .nav-head .items .item1 .drowp-menu2.active{
+    display: block;
+}
+
+header nav .nav-head .items  .item1 .drowp-menu2 li{
+    margin-top: 10px;
+}
+header nav .nav-head .box-button .btn-1{
+    padding: 10px 15px;
+    background-color: transparent;
+    color: var(--AlmostBlack);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+header nav .nav-head .box-button .btn-2{
+    padding: 10px 15px;
+    background-color: transparent;
+    color: var(--AlmostBlack);
+    border: none;
+    outline: none;
+    border: 1px solid var(--AlmostBlack);
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+header nav  #menu{
+    position: absolute;
+    top: 53px;
+  right: 37px;
+  opacity: 0;
+  cursor: pointer;
+}
+header .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 140px;
+}
+header .content .info h1{
+    font-size: 40px;
+    font-family: inherit;
+    font-weight: 700;
+    margin-left: 100px;
+}
+header .content .info p{
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 500;
+    margin-left: 100px;
+    color: var(--MediumGray);
+    margin-top: 50px;
+    width: 450px;
+    line-height: 30px;
+}
+header .content .info button{
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px;
+    color: var(--AlmostWhite);
+    background-color: var(--AlmostBlack);
+    margin: 80px 0 50px 100px;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+header .content .info button:hover{
+    background-color: transparent;
+    color: var(--AlmostBlack);
+    border: 1px solid var(--AlmostBlack);
+    padding: 14px 30px;
+}
+header .content .info ul{
+    margin-left: 80px;
+    margin-bottom: 140px;
+}
+header .content .info ul li{
+    display: inline-block;
+   margin-left: 20px;
+   margin-top: 20px;
+}
+header .content .box-img picture img{
+    width: 550px;
+    margin:0 100px;
+}
+.over-flow{
+    width: 100%;
+    height: 300%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.774);
+    z-index: -1;
+    display: none;
+    transition: all 0.6s;
+}
+/* mediaquery */
+@media(max-width:1440px){
+    header .content .box-img picture img {
+        margin: 0 0px 0 100px;
+      }
+}
+@media(max-width:1024px){
+    header .content {
+        margin-top: 3px;
+      }
+      header .content .info h1 {
+        margin-left: 154px;
+      }
+      header .content .info p {
+        padding-left: 50px;
+      }
+      header .content .info button {
+        margin: 80px 0 50px 141px;
+      }
+    
+    header .content .box-img picture img {
+        margin: 118px 92px 254px 0px;
+        width: 541px;
+        height: 524px;
+      }
+      header nav .nav-head .items {
+        margin-left: 40px;
+      }
+      
+}
+@media(max-width:768px){
+    header .content .info{
+        width: 300px;
+        margin-right: 75px;
+    }
+    header .content .box-img picture img {
+        width: 396px;
+        margin: 0 106px 64px 0;
+      }
+    header nav #menu {
+        top: 61px;
+        right: 25px;
+        opacity: 1;
+      }
+      header nav .nav-head {
+        flex-direction: column;
+        position: fixed;
+        top: -100px;
+        right: -250px;
+        width: 200px;
+        margin-top: 100px;
+        background-color: var(--AlmostWhite);
+        padding-top: 100px;
+        height: 100%;
+        transition: all 0.6s;
+        z-index: 3;
+      }
+      header nav .nav-head #close-menue{
+        display: block;
+        width: 25px;
+        position: absolute;
+        top: 46px;
+        right: 20px;
+        cursor: pointer;
+    }
+      header nav .nav-head.active {
+        flex-direction: column;
+        position: fixed;
+        top: -100px;
+        right: 0px;
+        width: 200px;
+        margin-top: 100px;
+        background-color: var(--AlmostWhite);
+        padding-top: 100px;
+        height: 100%;
+      }
+      header nav .nav-head .items {
+        flex-direction: column;
+      }
+     
+      header nav .nav-head .items .item1:first-child {
+        margin: 10px 0;
+      }
+
+      header nav .nav-head .items .item1 .drowp-menu1 {
+        background-color:transparent;
+        box-shadow: 0 0 0 0 rgba(0, 0, 1, 0.61);
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      header nav .nav-head .items .item1:nth-child(2) {
+        margin: 0;
+      }
+      header nav .nav-head .items .item1 .drowp-menu2 {
+        background-color: transparent;
+        box-shadow: 0 0 0 0 rgba(0, 0, 1, 0.61);
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      header nav .nav-head .items .item1 .drowp-menu2 li {
+        margin-top: 18px;
+      }
+      header nav .nav-head .items .item1 {
+        margin-top: 13px;
+      }
+      header nav .nav-head .box-button {
+        margin: 0px 0 0 52px;
+        position: relative;
+        top: 0px;
+      }
+      header nav .nav-head .box-button .btn-1 {
+        display: block;
+        margin-left: 25px;
+      }
+      header nav .nav-head .box-button .btn-2 {
+        display: block;
+        width: 131px;
+      }
+      header .content .info p {
+        width: 206px;
+      }
+      header .content .info ul {
+        margin-left: 23px;
+      }
+      header .content .info ul li {
+        margin-left: 43px;
+      }
+      header nav .nav-head .box-button {
+        margin: 0px 0 0 49px;
+        position: relative;
+        top: -30px;
+      }
+      header .content {
+        margin-top: 3px;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      header .content .box-img picture img {
+        width: 600px;
+        margin: 80px 0px 0px 0;
+      }
+      header .content .info {
+        width: 529px;
+        margin-right: 116px;
+        text-align: center;
+        margin-top: 100px;
+      }
+      header .content .info p {
+        width: 422px;
+      }
+      header .content .info ul {
+        margin-left: 57px;
+      }
+      header .content .info ul li {
+        margin-left: 25px;
+      }
+      .over-flow.active{
+        display: block;
+      }
+      
+}
+@media(max-width:480px){
+    header .content .box-img picture img {
+        width: 420px;
+        margin: 80px 0px 0px 0;
+      }
+      header .content .info ul {
+        margin-left: 110px;
+      }
+      header .content .info ul li img {
+        width: 70px;
+      }
+}
+@media(max-width:375px){
+    header .content .box-img picture img {
+        width: 345px;
+      }
+      header .content .info h1 {
+        margin-left: 120px;
+      }
+      header .content .info p {
+        width: 395px;
+      }
+      header .content .info button {
+        margin: 80px 0 50px 113px;
+      }
+      header .content .info ul {
+        margin-left: 93px;
+      }
+    header nav .nav-head #close-menue {
+        right: 43px;
+      }
+      header nav .nav-head .items {
+        margin-left: -33px;
+      }
+      header nav .nav-head .box-button {
+        margin: 0px 0 0 19px;
+      }
+}
